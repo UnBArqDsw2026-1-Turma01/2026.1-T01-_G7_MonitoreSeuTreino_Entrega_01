@@ -1,23 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>G7 - MonitoreSeuTreino</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+  <meta name="description" content="Documentação do projeto MonitoreSeuTreino - Arquitetura e Desenho de Software 2026.1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <style>
+    :root {
+      --theme-color: #1a73e8;
+      --theme-color-dark: #1558b0;
+      --sidebar-width: 280px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      border-right: 1px solid #e8e8e8;
+      background: #fafbfc;
+    }
+
+    .sidebar-nav li a {
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .sidebar-nav li a:hover {
+      color: var(--theme-color);
+      background-color: #e8f0fe;
+    }
+
+    /* Página ativa na sidebar */
+    .sidebar-nav li.active > a {
+      color: var(--theme-color) !important;
+      font-weight: 700 !important;
+      background-color: #e8f0fe;
+      border-left: 3px solid var(--theme-color);
+      padding-left: 5px;
+    }
+
+    .app-name-link {
+      font-weight: 700 !important;
+      font-size: 1.1rem !important;
+    }
+
+    /* Content */
+    .markdown-section {
+      max-width: 850px;
+      padding: 30px 25px 40px;
+    }
+
+    .markdown-section h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      border-bottom: 3px solid var(--theme-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .markdown-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: none;
+      padding-bottom: 0.3rem;
+    }
+
+    .markdown-section h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .markdown-section h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      padding-top: 0.8rem;
+    }
+
+    /* Tables */
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    .markdown-section table thead {
+      background-color: var(--theme-color);
+      color: #fff;
+    }
+
+    .markdown-section table th {
+      padding: 10px 16px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .markdown-section table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .markdown-section table tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    .markdown-section table tbody tr:hover {
+      background-color: #e3f2fd;
+    }
+
+    /* Blockquotes as callouts */
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background-color: #e8f0fe;
+      padding: 12px 20px;
+      border-radius: 0 4px 4px 0;
+      margin: 1rem 0;
+    }
+
+    .markdown-section blockquote p {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* Lists */
+    .markdown-section ol > li,
+    .markdown-section ul > li {
+      margin: 0.5rem 0;
+      line-height: 1.7;
+    }
+
+    /* Search */
+    .search input {
+      border-radius: 6px !important;
+      border: 1px solid #ddd !important;
+      padding: 8px 12px !important;
+    }
+
+    .search input:focus {
+      border-color: var(--theme-color) !important;
+      box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2) !important;
+    }
+
+    /* Pagination */
+    .docsify-pagination-container {
+      border-top: 1px solid #eaecef;
+      margin-top: 3rem;
+      padding-top: 1rem;
+    }
+
+    /* Scroll to top */
+    .scroll-to-top {
+      background-color: var(--theme-color) !important;
+    }
+
+    /* Code blocks */
+    .markdown-section code {
+      border-radius: 4px;
+      padding: 2px 6px;
+      background-color: #f1f3f4;
+      color: var(--theme-color-dark);
+      font-size: 0.9em;
+    }
+
+    .markdown-section pre > code {
+      background-color: #282c34;
+      color: #abb2bf;
+      padding: 16px;
+      border-radius: 6px;
+    }
+
+    /* Footer */
+    .markdown-section hr {
+      border: none;
+      border-top: 1px solid #eaecef;
+      margin: 2rem 0;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">Carregando...</div>
   <script>
     window.$docsify = {
+      name: 'MonitoreSeuTreino',
+      repo: 'https://github.com/UnBArqDsw2025-1-Turma01/2026.1-T01-_G7_MonteSeuTreino_Entrega_01',
       loadSidebar: true,
-      name: 'Repositorio Template',
-      repo: 'https://github.com/UnBArqDsw2025-1-Turma01/RepositorioTemplateEntrega1'
+      coverpage: false,
+      auto2top: true,
+      maxLevel: 3,
+      subMaxLevel: 2,
+      search: {
+        placeholder: 'Pesquisar...',
+        noData: 'Nenhum resultado encontrado.',
+        depth: 3
+      },
+      pagination: {
+        previousText: 'Anterior',
+        nextText: 'Próximo',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      copyCode: {
+        buttonText: 'Copiar',
+        successText: 'Copiado!'
+      }
     }
   </script>
+
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>

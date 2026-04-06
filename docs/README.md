@@ -9,7 +9,7 @@
   <a href="https://github.com/UnBArqDsw2026-1-Turma01/2026.1-T01-_G7_MonteSeuTreino_Entrega_01" target="_blank" class="tech-item" style="text-decoration: none; justify-content: center; cursor: pointer;">
     <strong>Repositório GitHub</strong>
   </a>
-  <a href="anexos/Apresentação_G7_MonitoreSeuTreino_In_Progress.pdf" download class="tech-item" style="text-decoration: none; justify-content: center; cursor: pointer;">
+  <a href="anexos/Apresentação_G7_MonitoreSeuTreino.pdf" download class="tech-item" style="text-decoration: none; justify-content: center; cursor: pointer;">
     <strong>Apresentação (PDF)</strong>
   </a>
   <a href="#/Base/1.Base" class="tech-item" style="text-decoration: none; justify-content: center; cursor: pointer;">

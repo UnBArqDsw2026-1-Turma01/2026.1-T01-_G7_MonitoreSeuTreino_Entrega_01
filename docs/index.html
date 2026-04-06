@@ -247,12 +247,13 @@
     }
 
     .member-card {
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: auto auto;
       border: 1px solid #e8e8e8;
       border-radius: 8px;
       padding: 14px 16px;
-      gap: 14px;
+      gap: 6px 16px;
       transition: box-shadow 0.2s, transform 0.2s;
       background: #fff;
     }
@@ -266,9 +267,20 @@
       transform: translateY(-1px);
     }
 
+    .member-header {
+      grid-column: 1;
+      grid-row: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      padding: 8px 0;
+    }
+
     .member-photo {
-      width: 56px;
-      height: 56px;
+      width: 72px;
+      height: 72px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #d4e6f1;
@@ -297,7 +309,19 @@
       text-decoration: underline;
     }
 
-    .member-contrib, .member-relato {
+    .member-contrib {
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #34495e;
+      margin: 4px 0 0 0;
+      text-align: justify;
+    }
+
+    .member-relato {
+      grid-column: 2;
+      grid-row: 2;
       font-size: 0.88rem;
       line-height: 1.6;
       color: #34495e;
@@ -311,6 +335,26 @@
 
     .member-relato em {
       color: #abb2b9;
+    }
+
+    @media (max-width: 600px) {
+      .member-card {
+        grid-template-columns: 1fr;
+      }
+      .member-header {
+        grid-row: 1;
+        flex-direction: row;
+        text-align: left;
+        gap: 12px;
+      }
+      .member-contrib {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .member-relato {
+        grid-column: 1;
+        grid-row: 3;
+      }
     }
 
     /* Prototype Gallery */
